@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0a0e27;
+  color: white;
+}
+
+.space-bg {
+  background: linear-gradient(to bottom, #0a0e27 0%, #1e3a8a 50%, #0a0e27 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.space-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(2px 2px at 60% 70%, white, transparent),
+    radial-gradient(1px 1px at 50% 50%, white, transparent),
+    radial-gradient(1px 1px at 80% 10%, white, transparent),
+    radial-gradient(2px 2px at 90% 60%, white, transparent),
+    radial-gradient(1px 1px at 33% 80%, white, transparent);
+  background-size: 200% 200%;
+  animation: stars 100s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes stars {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-space-purple to-cosmic-pink text-white font-bold py-3 px-8 rounded-full transform transition-all duration-300 hover:scale-110 hover:shadow-2xl;
+}
+
+.btn-secondary {
+  @apply bg-space-blue text-white font-bold py-3 px-8 rounded-full border-2 border-space-purple transform transition-all duration-300 hover:scale-110 hover:bg-space-purple;
+}
+
+.card {
+  @apply bg-gradient-to-br from-space-dark/80 to-space-blue/50 backdrop-blur-lg rounded-3xl p-6 border-2 border-space-purple/30 shadow-2xl;
+}
+
+.planet {
+  @apply rounded-full shadow-2xl transform transition-all duration-500;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl bg-space-dark/50 border-2 border-space-purple/50 text-white placeholder-gray-400 focus:outline-none focus:border-space-purple focus:ring-2 focus:ring-space-purple/50 transition-all;
+}
+
+.page-title {
+  @apply text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-space-purple via-cosmic-pink to-star-yellow bg-clip-text text-transparent mb-8;
+}
