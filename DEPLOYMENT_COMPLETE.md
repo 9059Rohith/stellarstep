@@ -10,8 +10,12 @@
 
 ### Backend (API)
 **URL**: https://backend-liart-delta-70.vercel.app
-- API Base: https://backend-liart-delta-70.vercel.app/api
-- Health Check: https://backend-liart-delta-70.vercel.app/
+**API Base**: https://backend-liart-delta-70.vercel.app/api
+- ✅ Health Check: https://backend-liart-delta-70.vercel.app/
+- ✅ User API: https://backend-liart-delta-70.vercel.app/api/user/{userId}
+- ✅ Tasks API: https://backend-liart-delta-70.vercel.app/api/task/{userId}
+- ✅ Progress API: https://backend-liart-delta-70.vercel.app/api/progress/{userId}
+- ✅ AI API: https://backend-liart-delta-70.vercel.app/api/ai/chat
 
 ## 📦 Deployed Components
 
