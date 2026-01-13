@@ -52,3 +52,6 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`🌟 StellarStep Server running on port ${PORT}`);
 });
+
+// Export for Vercel
+export default app;
